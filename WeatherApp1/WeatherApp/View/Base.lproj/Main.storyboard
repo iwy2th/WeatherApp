@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iqb-rL-CJw">
-                                <rect key="frame" x="0.0" y="50.000000000000028" width="430" height="438.66666666666674"/>
+                                <rect key="frame" x="0.0" y="50" width="430" height="538.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0cs-iA-Opp">
                                         <rect key="frame" x="15" y="0.0" width="400" height="40"/>
@@ -60,15 +60,15 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-UC-zjG">
-                                        <rect key="frame" x="115" y="80" width="200" height="200"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-UC-zjG">
+                                        <rect key="frame" x="65" y="80" width="300" height="300"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="BW2-Wp-Fjm"/>
-                                            <constraint firstAttribute="width" constant="200" id="v9x-J6-Bg6"/>
+                                            <constraint firstAttribute="height" constant="300" id="BW2-Wp-Fjm"/>
+                                            <constraint firstAttribute="width" constant="300" id="v9x-J6-Bg6"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gFh-lj-spq">
-                                        <rect key="frame" x="116.33333333333333" y="280" width="197.66666666666669" height="119.66666666666669"/>
+                                        <rect key="frame" x="116.33333333333333" y="380" width="197.66666666666669" height="119.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="21" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhe-e2-CGp" userLabel="Temperature Label">
                                                 <rect key="frame" x="0.0" y="12" width="92.666666666666671" height="95.666666666666671"/>
@@ -88,7 +88,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfb-db-dOE">
-                                        <rect key="frame" x="166" y="402.66666666666669" width="98" height="36"/>
+                                        <rect key="frame" x="166" y="502.66666666666663" width="98" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -128,43 +128,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VKb-8q-VB0">
-                                <rect key="frame" x="0.0" y="59" width="430" height="789"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeImage" translatesAutoresizingMaskIntoConstraints="NO" id="k90-rc-Ass">
-                                        <rect key="frame" x="15" y="0.0" width="400" height="739"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="400" id="Bvz-nX-yWF"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thM-gk-xaZ">
-                                        <rect key="frame" x="65" y="739" width="300" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ZTo-vR-bFC"/>
-                                            <constraint firstAttribute="height" constant="50" id="cI5-vL-Mhw"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Get Started" cornerStyle="capsule">
-                                            <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                            <color key="baseBackgroundColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.39607840779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="eck-Pg-54h"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bacground2" translatesAutoresizingMaskIntoConstraints="NO" id="k90-rc-Ass">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thM-gk-xaZ">
+                                <rect key="frame" x="40" y="737" width="350" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="thM-gk-xaZ" secondAttribute="bottom" id="Pdc-M3-7I7"/>
+                                    <constraint firstAttribute="height" constant="50" id="cFC-vh-uEt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="fnI-jD-Rij"/>
                                 </constraints>
-                            </stackView>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Get Started" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                    <color key="baseBackgroundColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.39607840779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="eck-Pg-54h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bBo-ee-hTJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bBo-ee-hTJ" firstAttribute="bottom" secondItem="VKb-8q-VB0" secondAttribute="bottom" constant="50" id="AMp-D2-F6X"/>
-                            <constraint firstItem="bBo-ee-hTJ" firstAttribute="trailing" secondItem="VKb-8q-VB0" secondAttribute="trailing" id="HcO-9D-S3b"/>
-                            <constraint firstItem="VKb-8q-VB0" firstAttribute="leading" secondItem="bBo-ee-hTJ" secondAttribute="leading" id="Jiu-y9-hjw"/>
-                            <constraint firstItem="VKb-8q-VB0" firstAttribute="top" secondItem="bBo-ee-hTJ" secondAttribute="top" id="TPp-sM-C1R"/>
+                            <constraint firstItem="k90-rc-Ass" firstAttribute="leading" secondItem="bBo-ee-hTJ" secondAttribute="leading" id="4jt-4h-Y4l"/>
+                            <constraint firstItem="thM-gk-xaZ" firstAttribute="top" secondItem="bBo-ee-hTJ" secondAttribute="top" constant="678" id="50o-b0-Zfx"/>
+                            <constraint firstItem="k90-rc-Ass" firstAttribute="top" secondItem="wA2-M6-fsC" secondAttribute="top" id="9Wb-9o-jlh"/>
+                            <constraint firstItem="thM-gk-xaZ" firstAttribute="centerX" secondItem="wA2-M6-fsC" secondAttribute="centerX" id="Psz-yx-Ir8"/>
+                            <constraint firstItem="thM-gk-xaZ" firstAttribute="leading" secondItem="bBo-ee-hTJ" secondAttribute="leading" constant="40" id="YB8-E3-46v"/>
+                            <constraint firstItem="k90-rc-Ass" firstAttribute="trailing" secondItem="bBo-ee-hTJ" secondAttribute="trailing" id="lWi-tm-zXW"/>
+                            <constraint firstAttribute="bottom" secondItem="k90-rc-Ass" secondAttribute="bottom" id="rH3-M0-108"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -175,8 +167,8 @@
     </scenes>
     <color key="tintColor" name="AccentColor"/>
     <resources>
-        <image name="HomeImage" width="666.66668701171875" height="666.66668701171875"/>
-        <image name="clouds" width="512" height="512"/>
+        <image name="3" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="bacground2" width="1242" height="2208"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="AccentColor">
