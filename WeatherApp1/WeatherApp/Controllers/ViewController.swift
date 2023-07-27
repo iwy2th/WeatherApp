@@ -13,6 +13,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var temperaturelLabel: UILabel!
   @IBOutlet weak var cityLabel: UILabel!
   @IBOutlet weak var searchTextField: UITextField!
+  var weatherManager = WeatherManager()
   // MARK: - ViewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,14 +21,12 @@ class ViewController: UIViewController {
   }
   @IBAction func searchPressed(_ sender: UIButton) {
     searchTextField.endEditing(true)
-    print(searchTextField.text!)
   }
 }
 // MARK: - UITextFieldDelegate
 extension ViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     searchTextField.endEditing(true)
-    print(searchTextField.text!)
     return true
   }
   func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -43,7 +42,9 @@ extension ViewController: UITextFieldDelegate {
     }
   }
   func textFieldDidEndEditing(_ textField: UITextField) {
-    
+    if let city = textField.text {
+     weatherManager.fetchWeather(cityName: city)
+    }
   }
 }
 
