@@ -17,7 +17,7 @@ class ViewController: UIViewController {
   // MARK: - ViewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
-    //
+    weatherManager.delegate = self
   }
   @IBAction func searchPressed(_ sender: UIButton) {
     searchTextField.endEditing(true)
@@ -45,6 +45,14 @@ extension ViewController: UITextFieldDelegate {
     if let city = textField.text {
      weatherManager.fetchWeather(cityName: city)
     }
+  }
+}
+extension ViewController: WeatherManagerDelegate {
+  func didFailWithError(error: Error) {
+    print(error)
+  }
+  func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
+    
   }
 }
 
