@@ -17,5 +17,6 @@ struct Main: Codable {
   let feels_like: Double
 }
 struct Weather: Codable {
+  let id: Int
   let main: String
 }
