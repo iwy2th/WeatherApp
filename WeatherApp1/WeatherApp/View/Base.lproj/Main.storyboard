@@ -30,6 +30,9 @@
                                                 </constraints>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal" backgroundImage="location.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="locationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M2X-Ef-XG8"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the city name" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="IQZ-Pi-vLT">
                                                 <rect key="frame" x="50" y="0.0" width="300" height="40"/>
@@ -57,7 +60,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.bolt" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-UC-zjG">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-UC-zjG">
                                         <rect key="frame" x="115" y="80" width="200" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="BW2-Wp-Fjm"/>
@@ -110,7 +113,7 @@
                         <outlet property="cityLabel" destination="bfb-db-dOE" id="p5X-ei-S4B"/>
                         <outlet property="conditionImageView" destination="CbG-UC-zjG" id="4g2-aV-sR0"/>
                         <outlet property="searchTextField" destination="IQZ-Pi-vLT" id="g9b-Ag-Znu"/>
-                        <outlet property="temperaturelLabel" destination="Bhe-e2-CGp" id="lx0-p6-Kuw"/>
+                        <outlet property="temperatureLabel" destination="Bhe-e2-CGp" id="lx0-p6-Kuw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -173,7 +176,7 @@
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="HomeImage" width="666.66668701171875" height="666.66668701171875"/>
-        <image name="cloud.bolt" width="512" height="512"/>
+        <image name="clouds" width="512" height="512"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="AccentColor">
