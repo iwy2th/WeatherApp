@@ -46,13 +46,25 @@ extension ViewController: UITextFieldDelegate {
      weatherManager.fetchWeather(cityName: city)
     }
   }
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+      let text = textField.text ?? ""
+      let replacedText = (text as NSString).replacingCharacters(in: range, with: string)
+      let sanitizedText = replacedText.replacingOccurrences(of: " ", with: "")
+      textField.text = sanitizedText
+      return false
+  }
+
 }
 extension ViewController: WeatherManagerDelegate {
   func didFailWithError(error: Error) {
     print(error)
   }
   func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
-    
+    DispatchQueue.main.async {
+      self.temperaturelLabel.text = weather.tempString
+      self.conditionImageView.image = UIImage(systemName: weather.conditionName)
+      self.cityLabel.text = weather.cityName
+    }
   }
 }
 

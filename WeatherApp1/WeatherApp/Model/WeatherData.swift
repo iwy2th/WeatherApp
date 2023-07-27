@@ -13,7 +13,7 @@ struct WeatherData: Codable {
 }
 
 struct Main: Codable {
-  let temp: Int
+  let temp: Double
   let feels_like: Double
 }
 struct Weather: Codable {
