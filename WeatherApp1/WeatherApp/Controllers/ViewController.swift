@@ -13,15 +13,26 @@ class ViewController: UIViewController {
   @IBOutlet weak var temperatureLabel: UILabel!
   @IBOutlet weak var cityLabel: UILabel!
   @IBOutlet weak var searchTextField: UITextField!
+  @IBOutlet weak var feelsLikeLabel: UILabel!
+  @IBOutlet weak var humidityLabel: UILabel!
+  @IBOutlet weak var tempMinLabel: UILabel!
+  @IBOutlet weak var tempMaxLabel: UILabel!
   var weatherManager = WeatherManager()
   let locationManager = CLLocationManager()
+  let userDefault = UserDefaults.standard
+  var cityName: String = "LonDon"
   // MARK: - ViewDidLoad
   override func viewDidLoad() {
+    print(cityName)
     super.viewDidLoad()
     weatherManager.delegate = self
     locationManager.delegate = self
     locationManager.requestWhenInUseAuthorization()
-    locationManager.requestLocation()
+    if let city = userDefault.string(forKey: "CityName") {
+      cityName = city
+    }
+    weatherManager.fetchWeather(cityName: cityName)
+    print("*********\(cityName)")
   }
   @IBAction func searchPressed(_ sender: UIButton) {
     searchTextField.endEditing(true)
@@ -50,7 +61,8 @@ extension ViewController: UITextFieldDelegate {
   }
   func textFieldDidEndEditing(_ textField: UITextField) {
     if let city = textField.text {
-     weatherManager.fetchWeather(cityName: city)
+     cityName = city
+     weatherManager.fetchWeather(cityName: cityName)
     }
   }
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -77,6 +89,12 @@ extension ViewController: WeatherManagerDelegate {
       self.conditionImageView.image = UIImage(named: weather.conditionName)
       print(weather.conditionName)
       self.cityLabel.text = weather.cityName
+      self.cityName = weather.cityName
+      self.userDefault.set(self.cityName.replacingOccurrences(of: " ", with: ""), forKey: "CityName")
+      self.tempMinLabel.text = String(format: "%.1f °C", weather.tempMin)
+      self.tempMaxLabel.text = String(format: "%.1f °C",weather.tempMax)
+      self.humidityLabel.text = String(format: "%.1f km/h",weather.humidity)
+      self.feelsLikeLabel.text = String(format: "%.1f °C",weather.feelsLike)
     }
   }
 }
